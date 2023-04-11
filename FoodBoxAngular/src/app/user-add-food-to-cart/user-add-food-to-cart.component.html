@@ -1,0 +1,41 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th><i class="fa fa-id-card"></i>Id</th>
+            <th>Image</th>
+            <th><i class="fa fa-id-card"></i>Name</th>
+            <th><i class="fa fa-user"></i>Category</th>
+            <th>Cuisine</th>
+            <th>Description</th>
+            <th><i ></i>Discount</th>
+            <th> Available</th>
+           
+            <th><i class="fa fa-rupee-sign"></i>Price</th>
+            
+            <th><i class="fa fa-info-circle"></i>Details</th>
+            <!-- <th><i class="fa fa-pen"></i>Edit</th>
+            <th><i class="fa fa-trash"></i>Action</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of food">
+            <td>{{f.id}}</td>
+            <td><img src="{{f.image}}" width="200px" height="150px"></td>
+            <td>{{f.name}}</td>
+            <td>{{f.category}}</td>
+            <td>{{f.cuisine}}</td>
+            <td>{{f.description}}</td>
+            <td>{{f.discount}}%</td>
+            <td>{{f.available}}</td>
+           
+            <td>{{f.price}}Rs.</td>
+            
+        
+        < <td> <a routerLink="/user-checkout/"><button class = "btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true">  Checkout</i></button></a></td>
+        <td> <a routerLink="/user-add-food-to-cart/"><button class = "btn btn-success"><i class="fa fa-cart-plus" aria-hidden="true">  Add  More  To  Cart</i></button></a></td>
+        
+        
+        
+    </tr>
+</tbody>
+</table>
